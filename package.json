@@ -1,0 +1,24 @@
+{
+  "name": "@tover/eslint-config",
+  "version": "1.0.0",
+  "description": "tover eslint config",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tover",
+    "eslint",
+    "config"
+  ],
+  "author": "Stef van Wijchen",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0"
+  }
+}
