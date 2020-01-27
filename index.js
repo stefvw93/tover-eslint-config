@@ -14,9 +14,9 @@ module.exports = {
   },
   plugins: ["react", "prettier", "@typescript-eslint"],
   rules: {
-    "prettier/prettier": "warn",
+    "prettier/prettier": "error",
     "@typescript-eslint/explicit-member-accessibility": [
-      "warn",
+      "error",
       {
         accessibility: "explicit",
         overrides: {
