@@ -1,46 +1,56 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
   extends: ["plugin:prettier/recommended", "prettier/react"],
+  extends: [
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "prettier/react",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: "module",
   },
-  plugins: ["react", "prettier", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "prettier", "import"],
   rules: {
-    "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "import/no-default-export": "error",
+    "no-unused-vars": "off",
+    "prettier/prettier": "warn",
+    "react/prop-types": 0,
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {
-        accessibility: "explicit",
+        accessibility: "no-public",
         overrides: {
-          constructors: "off"
-        }
-      }
+          constructors: "off",
+        },
+      },
     ],
     "lines-between-class-members": [
       "error",
       "always",
-      { exceptAfterSingleLine: true }
-    ]
+      { exceptAfterSingleLine: true },
+    ],
   },
   settings: {
     react: {
-      version: "16.12"
-    }
+      version: "detect",
+    },
   },
   overrides: [
     {
       files: ["*.js"],
       rules: {
-        "@typescript-eslint/explicit-member-accessibility": "off"
-      }
-    }
-  ]
+        "@typescript-eslint/explicit-member-accessibility": "off",
+      },
+    },
+  ],
 };
